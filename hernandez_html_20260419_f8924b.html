@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Fernando José Hernández Gómez · Currículum Vitae</title>
+    <!-- Fuentes académicas y modernas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f0f4f9;
+            color: #1a2e40;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+        .cv-wrapper {
+            max-width: 1300px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 20px 40px -12px rgba(0,0,0,0.12);
+            border-radius: 28px;
+            overflow: hidden;
+            border: 1px solid #d9e2ec;
+        }
+        .header {
+            background: linear-gradient(135deg, #0a2538 0%, #154a66 100%);
+            color: white;
+            padding: 2.5rem 3rem 2rem 3rem;
+        }
+        .header-top {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .name-title h1 {
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+            font-size: 2.6rem;
+            letter-spacing: -0.01em;
+            margin-bottom: 0.25rem;
+        }
+        .badge-doctor {
+            display: inline-block;
+            background: rgba(255,255,255,0.12);
+            padding: 0.2rem 1.2rem;
+            border-radius: 40px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            backdrop-filter: blur(4px);
+        }
+        .personal-mini {
+            text-align: right;
+            font-size: 0.95rem;
+            background: rgba(255,255,255,0.05);
+            padding: 0.8rem 1.5rem;
+            border-radius: 40px;
+        }
+        .personal-mini i {
+            margin-right: 6px;
+            opacity: 0.8;
+        }
+        .header-links {
+            margin-top: 1.8rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            padding-top: 1.5rem;
+        }
+        .link-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #dfeaf3;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .link-item i {
+            font-size: 1.2rem;
+            width: 1.6rem;
+            color: #9fc5e8;
+        }
+        .link-item:hover {
+            color: white;
+            text-decoration: underline;
+        }
+        .main-content {
+            padding: 2.8rem 3rem;
+        }
+        .section {
+            margin-bottom: 2.8rem;
+        }
+        .section-title {
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+            font-size: 1.7rem;
+            color: #0b2a41;
+            border-bottom: 3px solid #cbdae6;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.6rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .section-title i {
+            color: #2a628f;
+            font-size: 1.6rem;
+        }
+        .grid-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+        }
+        .executive-box {
+            background: #ecf3fa;
+            padding: 1.8rem 2.2rem;
+            border-radius: 24px;
+            margin-bottom: 2rem;
+            border-left: 6px solid #1e4f73;
+        }
+        .research-line {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin: 1.2rem 0 0.5rem;
+        }
+        .research-card {
+            background: white;
+            padding: 1.2rem 1.8rem;
+            border-radius: 18px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.02);
+            border: 1px solid #d9e2ec;
+            flex: 1 1 240px;
+        }
+        .list-academic {
+            list-style: none;
+        }
+        .list-academic li {
+            margin-bottom: 1.2rem;
+            display: flex;
+            gap: 14px;
+        }
+        .year-tag {
+            min-width: 110px;
+            font-weight: 600;
+            color: #1e4f73;
+        }
+        .pub-item {
+            margin-bottom: 0.9rem;
+            padding-left: 1rem;
+            border-left: 2px solid #b6cee2;
+        }
+        .teaching-item {
+            margin-bottom: 1.4rem;
+        }
+        .institution {
+            font-weight: 700;
+            color: #0f3a54;
+        }
+        .ref-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1.2rem;
+        }
+        .ref-card {
+            background: #f7faff;
+            padding: 1rem 1.4rem;
+            border-radius: 16px;
+            border: 1px solid #dee7ef;
+        }
+        .ref-name {
+            font-weight: 700;
+            color: #0b2a41;
+        }
+        .badge-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 14px;
+            margin-top: 10px;
+        }
+        .badge-tech {
+            background: #e2eaf3;
+            padding: 4px 16px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            color: #1e3a5a;
+        }
+        .link-pdf {
+            color: #1a5e8c;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 6px;
+        }
+        .link-pdf i {
+            font-size: 0.8rem;
+            margin-right: 4px;
+        }
+        .link-pdf:hover {
+            text-decoration: underline;
+        }
+        .footer-note {
+            margin-top: 2.5rem;
+            text-align: right;
+            font-size: 0.9rem;
+            color: #5e7e9c;
+            border-top: 1px dashed #cbdae6;
+            padding-top: 1.5rem;
+        }
+        @media (max-width: 750px) {
+            .grid-2col { grid-template-columns: 1fr; }
+            .header, .main-content { padding: 1.8rem; }
+            .header-top { flex-direction: column; gap: 15px; }
+            .personal-mini { text-align: left; width: 100%; }
+        }
+        .text-muted-link {
+            color: #1e4f73;
+            text-decoration: none;
+        }
+        .text-muted-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<div class="cv-wrapper">
+    <header class="header">
+        <div class="header-top">
+            <div class="name-title">
+                <h1>Fernando José<br>Hernández Gómez</h1>
+                <span class="badge-doctor"><i class="fas fa-graduation-cap"></i> Ph.D. en Matemática Aplicada</span>
+            </div>
+            <div class="personal-mini">
+                <div><i class="fas fa-calendar-alt"></i> 28 Dic 1982 · Granada, Nicaragua</div>
+                <div><i class="fas fa-flag"></i> Nicaragüense</div>
+                <div><i class="fas fa-users"></i> Grupo: A prueba de indecisos</div>
+            </div>
+        </div>
+        <div class="header-links">
+            <a href="https://nexciencia.exactas.uba.ar/a-prueba-de-indecisos" target="_blank" class="link-item"><i class="fas fa-globe"></i> Grupo de investigación: A prueba de indecisos</a>
+            <a href="https://www.linkedin.com/in/fernando-hernández-b3130438" target="_blank" class="link-item"><i class="fab fa-linkedin"></i> linkedin.com/in/Fernando-Hernández</a>
+            <span class="link-item"><i class="fas fa-map-pin"></i> Managua, Nicaragua</span>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <!-- Resumen ejecutivo -->
+        <div class="executive-box">
+            <p style="font-size: 1.1rem; margin-bottom: 1rem;"><i class="fas fa-quote-left" style="margin-right: 8px; opacity: 0.6;"></i> 
+                Matemático, educador e investigador con experiencia en <strong>Matemática Aplicada</strong>, <strong>Investigación de Operaciones</strong> y <strong>Didáctica de la Matemática</strong>.
+            </p>
+            <p>Doctorado y Maestría en Matemática Aplicada (UNAN-Managua / UCLV, Cuba). Tesis doctoral sobre <em>Algoritmos Heurísticos de Coincidencia para la Estimación de Movimientos en Compresión de Imágenes</em>, supervisada por Dr. Antonio Parajón y Dra. Irene Loiseau.</p>
+        </div>
+
+        <div class="section">
+            <div class="section-title"><i class="fas fa-flask"></i> Líneas de investigación</div>
+            <div class="research-line">
+                <div class="research-card"><i class="fas fa-chalkboard-user"></i> <strong>Modelo Heurístico para Enseñanza-Aprendizaje de Matemática</strong><p style="margin-top:6px;">Fundamentado en Didáctica de la Matemática.</p></div>
+                <div class="research-card"><i class="fas fa-route"></i> <strong>Algoritmos para GVRP</strong><p style="margin-top:6px;">Problemas de ruteo de vehículos generalizado (NP-Hard).</p></div>
+            </div>
+        </div>
+
+        <div class="grid-2col">
+            <div>
+                <div class="section-title"><i class="fas fa-university"></i> Formación</div>
+                <ul class="list-academic">
+                    <li><span class="year-tag">2014–2017</span><span><strong>Ph.D. en Matemática Aplicada</strong><br>UNAN-Managua / UCLV, Cuba.</span></li>
+                    <li><span class="year-tag">2014–2017</span><span><strong>M.Sc. en Matemática Aplicada</strong><br>UNAN-Managua.</span></li>
+                    <li><span class="year-tag">2009–2012</span><span><strong>Estudios Doctorales en Cs. de la Computación</strong><br>UBA (PICT 2006-01600).</span></li>
+                    <li><span class="year-tag">2001–2005</span><span><strong>Lic. en Ciencias de la Educación y Humanidades</strong><br>Especialidad Matemática, UNAN-Managua.</span></li>
+                </ul>
+                <div style="margin-top: 2rem;">
+                    <div class="section-title" style="font-size: 1.3rem;"><i class="fas fa-user-graduate"></i> Dirección doctoral</div>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 12px;">📘 <strong>Wilmer José Palacios López</strong> – Design of Efficient Heuristic and Metaheuristic Algorithms for the SBPR Problem. <a href="https://doi.org/10.5281/zenodo.15388803" target="_blank" class="link-pdf"><i class="fas fa-external-link-alt"></i>DOI</a></li>
+                        <li>📗 <strong>Donald Ariel Hernández Muñoz</strong> – Implementation of a Heuristic Model for the Teaching and Learning of Physics. <a href="https://zenodo.org/records/15361085" target="_blank" class="link-pdf"><i class="fas fa-external-link-alt"></i>DOI</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div class="section-title"><i class="fas fa-chalkboard"></i> Docencia universitaria</div>
+                <div class="teaching-item"><span class="institution">Keiser University Latin American Campus</span><br><span class="role-detail">Profesor tiempo completo (2021–Presente)</span><br>Álgebra básica, intermedia, universitaria.</div>
+                <div class="teaching-item"><span class="institution">UNAN-Managua</span><br><span class="role-detail">Profesor horario (2006–2008, 2012–Presente)</span><br>Matemática financiera, Inv. Operaciones, Ecuaciones diferenciales, Estadística.</div>
+                <div class="teaching-item"><span class="institution">UAM / UPOLI</span><br><span class="role-detail">Profesor adjunto y horario</span><br>Estadística, Métodos cuantitativos, Programación.</div>
+            </div>
+        </div>
+
+        <!-- PUBLICACIONES CON ENLACES COMPLETOS -->
+        <div class="section">
+            <div class="section-title"><i class="fas fa-book-open"></i> Publicaciones recientes</div>
+            <div class="pub-item"><strong>Hernández Gómez, F. J., & Palacios López, W. J. (2025).</strong> Heuristic algorithms for solving the generalized vehicle routing problem. <em>Applied and Computational Mathematics</em>. <a href="#" class="link-pdf">(aceptado)</a></div>
+            <div class="pub-item"><strong>Gómez, F. J. H., Castillo, T. H., & Munoz, D. A. H. (2025).</strong> Design and Implementation of a Didactic Heuristic Model... <a href="https://apolo.unab.edu.co/ws/portalfiles/portal/32288491/Libro_final_SIME.pdf#page=81" target="_blank" class="link-pdf"><i class="fas fa-file-pdf"></i>PDF</a></div>
+            <div class="pub-item"><strong>Palacios López, W. J., & Hernández Gómez, F. J. (2023).</strong> Impact of Genomic Rearrangement Studies... <em>Revista Científica Estelí</em>. <a href="https://doi.org/10.5377/farem.v12i46.16490" target="_blank" class="link-pdf">DOI</a></div>
+            <div class="pub-item"><strong>López, W. J. P., & Gómez, F. J. H. (2023).</strong> A Review and Classification of Algorithms for the SBPR Problem. <a href="https://revistasnicaragua.cnu.edu.ni/index.php/recientec/article/view/8005" target="_blank" class="link-pdf">URL</a></div>
+            <div class="pub-item"><strong>Hernández Muñoz, D. A., & Hernández Gómez, F. J. (2023).</strong> Design of the Heuristic Model (DONALD)... <a href="https://doi.org/10.5377/elhigo.v13i1.16370" target="_blank" class="link-pdf">DOI</a></div>
+            <div class="pub-item"><strong>Gómez, F. J. H. (2020).</strong> Heuristic Algorithms of Coincidence for Motion Estimation in Image Compression. <a href="https://doi.org/10.11648/j.acm.20200903.15" target="_blank" class="link-pdf">DOI</a></div>
+            <div class="pub-item"><strong>Hernández, F., & Hernández, T. (2020).</strong> Operations Research: Theory, Models, and Applied Problems. <a href="https://www.amazon.com/-/es/INVESTIGACI%C3%93N-OPERACIONES-Modelos-Problemas-Aplicados/dp/620041629X" target="_blank" class="link-pdf">Amazon</a></div>
+            <div class="pub-item"><strong>Hernández, F., & Parajón, R. (2019).</strong> Heuristic Matching Algorithms for Motion Estimation... <a href="https://doi.org/10.5281/zenodo.15388803" target="_blank" class="link-pdf">DOI</a></div>
+            <div class="pub-item"><strong>Hernández Gómez, F. J. (2017).</strong> Tesis doctoral. <a href="https://repositorio.unan.edu.ni/id/eprint/8820/" target="_blank" class="link-pdf">Repositorio UNAN</a></div>
+            <div class="pub-item"><strong>Hernández, F., & Borgen, M. (2016).</strong> Solved Problems in Numerical Mathematics... <a href="https://www.amazon.com/-/es/Variedades-problemas-resueltos-Matem%C3%A1tica-Num%C3%A9rica/dp/3639602463" target="_blank" class="link-pdf">Amazon</a></div>
+            <div class="pub-item"><strong>Hernández, F. (2016).</strong> Regression Models and Principal Component Analysis... <a href="https://www.amazon.com/Modelos-regresi%C3%B3n-an%C3%A1lisis-componentes-principales/dp/3841768679" target="_blank" class="link-pdf">Amazon</a></div>
+        </div>
+
+        <!-- Conferencias con certificados -->
+        <div class="grid-2col">
+            <div>
+                <div class="section-title"><i class="fas fa-microphone-alt"></i> Conferencias (selección)</div>
+                <ul style="list-style: none;">
+                    <li>📌 SIMMAC XXIV 2024 · <a href="https://drive.google.com/file/d/1n8SmuUAFgNLlxMSCLXTGnQ-YBpSNHF0M/view?usp=sharing" target="_blank" class="text-muted-link">Certificado</a></li>
+                    <li>📌 BIENAL CSUCA 2023 · <a href="https://drive.google.com/file/d/1OF_MUsWVYdFhxrgvZfm7J1HFX4F_KOFv/view?usp=sharing" target="_blank" class="text-muted-link">Certificado</a></li>
+                    <li>📌 Congreso Científico UNAN 2023 · <a href="https://drive.google.com/file/d/1vfgp7pdVSHHdN2IKtgi2JBt6yIaVhy10/view?usp=sharing" target="_blank" class="text-muted-link">Certificado</a></li>
+                    <li>📌 ECAMI 2022 · <a href="https://www.youtube.com/watch?v=uUlmwRK0Oeo&t=79s" target="_blank" class="text-muted-link">Video</a></li>
+                    <li>📌 SIME 2021 · <a href="https://drive.google.com/file/d/12vCoHBZ_ldYnz0KiPdmSotr5uzVWFVjI/view?usp=sharing" target="_blank" class="text-muted-link">Certificado</a></li>
+                    <li>📌 SIMMAC XXII 2020 · <a href="https://drive.google.com/file/d/1xgyFFyFlSSHJ9x0lO0FRjdObxGTMO8Mu/view?usp=sharing" target="_blank" class="text-muted-link">Certificado</a></li>
+                    <li>📌 RELME 33 · <a href="https://easychair.org/smart-program/RELME33/2019-07-09.html#talk:120170" target="_blank" class="text-muted-link">Programa</a></li>
+                    <li>📌 Jornada Doctoral 2019 · <a href="https://www.unan.edu.ni/index.php/notas-informativas/academicos-participan-en-jornada-cientifica.odp" target="_blank" class="text-muted-link">Nota</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="section-title"><i class="fas fa-laptop-code"></i> Competencias técnicas</div>
+                <div><strong>Lenguajes:</strong> C, C++, Visual.NET, TeXnicCenter</div>
+                <div style="margin-top: 16px;"><strong>Software matemático:</strong> Matlab, Maple, Mathematica, CoCoA, SINGULAR</div>
+                <div style="margin-top: 16px;"><strong>Estadística:</strong> SPSS, InfoStad, R</div>
+                <div style="margin-top: 20px;"><i class="fas fa-certificate"></i> <strong>Cursos recientes:</strong> Propiedad Intelectual (2023) <a href="https://drive.google.com/file/d/1Iw2qeH7lhsI5BXargePrwb3xt0pcwN6R/view?usp=sharing" class="link-pdf">cert</a>, Pedagogía digital (140h) <a href="https://drive.google.com/file/d/1-ejfjK17MkaWnJ9U1-ezD1VjUcUwKoAH/view?usp=sharing" class="link-pdf">cert</a>.</div>
+            </div>
+        </div>
+
+        <!-- Referencias académicas -->
+        <div class="section">
+            <div class="section-title"><i class="fas fa-address-book"></i> Referencias académicas</div>
+            <div class="ref-grid">
+                <div class="ref-card"><span class="ref-name"><a href="https://staff.dc.uba.ar/iloiseau/" target="_blank">Dra. Irene Loiseau</a></span><br>UBA · irene@dc.uba.ar</div>
+                <div class="ref-card"><span class="ref-name">Dr. Esteban Segura Ugalde</span><br>UCR · esteban.seguraugalde@ucr.ac.cr<br>📞 +506 8577 2650</div>
+                <div class="ref-card"><span class="ref-name"><a href="https://scholar.google.com/citations?user=kiXf-HoAAAAJ&hl=es" target="_blank">Dr. Francisco J. Soulignac</a></span><br>UNQ/CONICET · fsoulign@dc.uba.ar</div>
+                <div class="ref-card"><span class="ref-name">Dr. Antonio Parajón Guevara</span><br>UNAN-Managua · ramon.a.parajon@uv.es</div>
+                <div class="ref-card"><span class="ref-name">Dr. Rudy A. López Potosme</span><br>UAM · rudyalbertolopez@gmail.com</div>
+                <div class="ref-card"><span class="ref-name">Dr. Marvin H. Herrera</span><br>UAM · marvherrera3@gmail.com</div>
+            </div>
+        </div>
+        <div class="footer-note">
+            <i class="far fa-file-pdf"></i> Currículum actualizado · 2025 · Dr. Fernando José Hernández Gómez
+        </div>
+    </div>
+</div>
+</body>
+</html>
